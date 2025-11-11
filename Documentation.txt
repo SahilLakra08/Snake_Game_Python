@@ -1,0 +1,73 @@
+Pre-Requisites :
+1. Install python
+2. Vscode community editor
+3. pygame (pip install pygame )
+4. from pygame.locals import * : this will import all the certain global     variables 
+5. time (import time)
+6. random(import random) : to move apple randomly where in the code 25(24) comes from 1000/40 
+                            and 20 (19)comes from 800/40    
+
+
+About Pygame module:
+
+0. pygame.init()
+    Initialises the whole module
+
+1. pygame.display.set_mode(HorizontalPixel, VerticalPixel)
+    It initialises a window or display the screen(game screen).
+    Initialize a window or screen for display(in pixel) or background screen
+
+2. .fill((r,g,b)) 
+    Fills the color in red green blue ranges from 0 to 255.
+
+3. .pygame.display.flip()
+    After changing the color we have to use this method to update the color or screen.  
+
+4. Event Loop :
+    Event loop is something that is waiting for user input or action
+    Here it is for to runt the game for infinite time and when user enters ESC or
+    cancel then the game will close.
+
+5. pygame.event.get()
+    It will get all the actions or events like mouse clicks or entering buttons 
+    done by the user.
+
+6. event.type == KEYDOWN
+    It is the event type named KEYDOWN(global variable) imported from pygame.locals
+
+7. pygame.image.load("path of the image").convert()
+    It will loads the image in the screen and .convert here is the method
+
+8. surface.blit(block,(100,100))
+    It draws the image where 
+    block is what to draw (block,()) and where to draw (  ,(HorizontalPixel,VerticalPixel))
+
+9. def draw_block () :
+    whenever it is called it draws a block
+
+10. def draw_block() : 
+    surface.fill((110,110,5)) 
+    Here , when the block moves the spaces left behind will get filled with the same
+    color of the background.(clearing the screen)
+
+11. parent_screen is surface.
+
+12. move_left 
+    The snake will move left and so on for all the directions
+
+13. Making it in terms of OOPs concept.
+
+14. Self.snake.walk 
+    runs the snake automatically without any user action
+
+15. pygame.font.Sysfont("font",size) : has module for writing the score or message
+
+16. pygame.mixer :  for loading and playing sounds
+
+17. For convert this python file to exe :-
+    we use - pip install auto-py-to-exe
+    then we have to run this command in terminal (auto-py-to-exe.exe)
+    then an interface will load , where we specify the file we want to convert into exe
+    for single exe file we use one file. In additional file we add resources folder other wise it will not run
+    then convert py. to exe. this will generate the whole binary code of the python file. Then open output 
+    folder.to see where the file is.
